@@ -15,16 +15,17 @@ const Login = () => {
   const [showpass, setShowpass] = useState(false);
   const userlogin = async()=>{
     try {
-     
+      const config = {
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
+          'Content-Type': 'application/json'
+        }
+      };
       const data = await axios.post(BASE_URL+"login", {
         email,
         password,
-      }, {
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        withCredentials: true
-      })
+      }, config)
       
       console.log(data.data.userLogin);
       const info = JSON.stringify(data.data.userLogin);
