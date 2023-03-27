@@ -26,14 +26,18 @@ const NavBeforeLogin = () => {
                 <h2 className='fs-5' style={{fontFamily:"Permanent Marker"}}><span className='fs-3' >MeMe-Me</span>taverse</h2>
             </a>
             {/* <!-- Left links --> */}
-            <ul class="navbar-nav me-auto fs-5 text-body mb-2 mb-lg-0">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                <a class="nav-link" href="/">Home</a>
+                <Link to={'/ourteam'} style={{textDecoration:"none"}}>
+                    <a class="nav-link" href="#">Team</a>
+
+                </Link>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="/">Category</a>
+                <Link to={"/categories"} style={{textDecoration:"none"}}>
+                <a class="nav-link" href="#">Categories</a>
+                </Link>
                 </li>
-                
             </ul>
             {/* <!-- Left links --> */}
             </div>
